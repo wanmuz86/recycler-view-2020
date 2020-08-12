@@ -1,5 +1,6 @@
 package my.com.anak2u.myrecylerview;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
+
         holder.titleTextView.setText(items.get(position));
     }
 
@@ -30,6 +32,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     // How many rows are there
     @Override
     public int getItemCount() {
+        Log.d("data","datas "+items.size());
         return items.size();
     }
 
